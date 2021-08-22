@@ -16,9 +16,6 @@
         <label>Contact number</label> -
         <input type="number" style="border-radius: 40px;" value=" " id="Contact"> <br><br><br><br>
         
-        <label>Address</label> -
-        <textarea type="text" style="border-radius: 40px; height: 20px; border: 2px solid black;" value=" " id="Address"> </textarea><br><br><br><br>
-        
         <label>DOB of the Patient</label> -
         <input type="date" style="border-radius: 40px;" value=" " id="DOB"> <br><br><br><br>
         
@@ -29,13 +26,30 @@
         <input type="number" style="border-radius: 40px;" value=" " id="conA"> <br><br><br><br>
 
         <label>Gender of Patient</label> - <br>
-        <input type="radio" style="border-radius: 40px;" name="y" onclick="med(1)">Male
-        <input type="radio" style="border-radius: 40px;" name="y" onclick="med(2)">Female<br><br><br><br>
+        <input type="radio" style="border-radius: 40px;" name="y" id="male" onclick='true'>Male
+        <input type="radio" style="border-radius: 40px;" name="y">Female<br><br><br><br>
+
+        <label>Address of the patient</label> -
+        <textarea type="text" style="border: 2px solid black; border-radius: 40px;" value=" " id="Address"> </textarea><br><br><br><br>
 
         <button type="button" onclick="call()">Submit</button>
     </form>
     
-    <script src="assing.js"></script>
+    <script>
+        // medicalForm.html
+        function call(){
+            if(confirm("Have you given your details?") == true){
+            var gender = document.getElementById("male").checked;
+            if(gender == true){
+                document.write("Name of Patient - "+document.getElementById("name").value+'<br>'+"Contact of Patient - "+document.getElementById("Contact").value+'<br>'+"Address of Patient - "+document.getElementById("Address").value+'<br>'+"DOB of Patient - "+document.getElementById("DOB").value+'<br>'+"Name of Attendees - "+document.getElementById("Atendees").value+'<br>'+"Contact of Attendees - "+document.getElementById("conA").value+'<br>'+"Gender of patient - Male");
+            }else{
+                document.write("Name of Patient - "+document.getElementById("name").value+'<br>'+"Contact of Patient - "+document.getElementById("Contact").value+'<br>'+"Address of Patient - "+document.getElementById("Address").value+'<br>'+"DOB of Patient - "+document.getElementById("DOB").value+'<br>'+"Name of Attendees - "+document.getElementById("Atendees").value+'<br>'+"Contact of Attendees - "+document.getElementById("conA").value+'<br>'+"Gender of patient - Female");
+            }
+        }
+            
+    }
+
     </script>
+
 </body>
 </html>

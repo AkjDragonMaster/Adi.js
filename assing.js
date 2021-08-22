@@ -53,8 +53,3 @@ function tab(){
     document.getElementById("output1").innerHTML = product;
    
 }
-
-// medicalForm.html
-function med(){
-    document.write("Name of patient - "+document.getElementById("1").value+'<br>'+"Contact number - "+document.getElementById("2").value+'<br>'+"Address - "+document.getElementById("3").value+'<br>'+"Gender - "+document.getElementById("4").value+'<br>'+"Name of Attendence - "+document.getElementById("5").value+'<br>'+"Gender of Attendence - "+document.getElementById("6").value+'<br>'+"Contact of Attendence - "+document.getElementById("7").value);
-}
